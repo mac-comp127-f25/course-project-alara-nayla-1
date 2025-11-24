@@ -12,7 +12,7 @@ public class gameBoard {
         Rectangle border = new Rectangle(20, 10, 860, 830);
         border.setStrokeWidth(10);
         border.setFillColor(Color.BLACK);
-        border.setStrokeColor(Color.BLUE);
+        border.setStrokeColor(Color.BLUE); 
         canvas.add(border);
     }
 
