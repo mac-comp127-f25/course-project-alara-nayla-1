@@ -1,10 +1,12 @@
 import edu.macalester.graphics.CanvasWindow;
+import edu.macalester.graphics.Line;
 import edu.macalester.graphics.Rectangle;
 
 import java.awt.Color;
 
 public class gameBoard {
     private CanvasWindow canvas;
+    public Line walls;
 
     public gameBoard() {
         canvas = new CanvasWindow("PacMan but better", 900, 900);
@@ -14,6 +16,7 @@ public class gameBoard {
         border.setFillColor(Color.BLACK);
         border.setStrokeColor(Color.BLUE); 
         canvas.add(border);
+        canvas.add(walls);
     }
 
     public static void main(String[] args){
