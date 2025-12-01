@@ -1,3 +1,3 @@
-public class ghost {
+public class Ghost {
     
 }

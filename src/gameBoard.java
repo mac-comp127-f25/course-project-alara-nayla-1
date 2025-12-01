@@ -5,12 +5,12 @@ import edu.macalester.graphics.Rectangle;
 
 import java.awt.Color;
 
-public class gameBoard {
+public class GameBoard {
     private CanvasWindow canvas;
     public Line walls;
-    public GraphicsObject cookies;
+    
 
-    public gameBoard() {
+    public GameBoard() {
         canvas = new CanvasWindow("PacMan but better", 900, 900);
 
         Rectangle border = new Rectangle(20, 10, 860, 830);
@@ -19,11 +19,10 @@ public class gameBoard {
         border.setStrokeColor(Color.BLUE);
         canvas.add(border);
         canvas.add(walls);
-        canvas.add(cookies);
     }
 
     public static void main(String[] args){
-        new gameBoard();
+        new GameBoard();
     }
 }
 
