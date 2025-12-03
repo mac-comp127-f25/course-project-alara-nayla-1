@@ -1,6 +1,7 @@
 import java.awt.Color;
 
 
+
 // public class Walls {
 
 // public Walls() {
@@ -13,9 +14,14 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 
 public class Walls {
+     private List<Rectangle> wallList = new ArrayList<>(); //added for cookies
     
     public Walls(CanvasWindow canvas) {
         createWalls(canvas);
+    }
+
+    public List<Rectangle> getWalls() {
+        return wallList;
     }
     
     private void createWalls(CanvasWindow canvas) {
@@ -71,5 +77,6 @@ public class Walls {
         wall.setStrokeColor(Color.BLUE);
         wall.setStrokeWidth(1);
         canvas.add(wall);
+        wallList.add(wall); //I added this so that I can use it to check for collisions with the cookies
     }
 }
