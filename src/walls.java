@@ -1,6 +1,6 @@
 import java.awt.Color;
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 // public class Walls {
 
@@ -20,7 +20,7 @@ public class Walls {
         createWalls(canvas);
     }
 
-    public List<Rectangle> getWalls() {
+    public List<Rectangle> getWalls() { //added for cookies
         return wallList;
     }
     

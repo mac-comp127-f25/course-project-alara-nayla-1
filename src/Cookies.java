@@ -13,7 +13,7 @@ public class Cookies {
         createCookies(canvas);
     }
     private void createCookies(CanvasWindow canvas) {
-        double space = 20;
+        double space = 38;
 
         for (double x = 40; x <860; x += space) {
             for (double y = 40; y < 820; y += space) {
@@ -23,10 +23,22 @@ public class Cookies {
         }
     }
     private boolean collidesWithWall(double x, double y) {
+        double radius = 9;
         for (Rectangle wall : walls.getWalls()) {
-            if (wall.containsPoint(x, y)) {
-                return true;
-            }
+            double left = x - radius; 
+            double right = x + radius;
+            double top = y - radius;
+            double bottom = y + radius;
+
+            double wallLeft = wall.getX();
+            double wallRight = wall.getX() + wall.getWidth();
+            double wallTop = wall.getY();
+            double wallBottom = wall.getY() + wall.getHeight();
+
+            boolean overlap = right > wallLeft && left < wallRight && 
+                bottom > wallTop && top < wallBottom;
+            
+            if (overlap) return true;
         }
         return false;
     }
