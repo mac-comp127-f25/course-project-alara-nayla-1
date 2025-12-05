@@ -29,6 +29,7 @@ public class GameBoard {
     private Walls walls;
     private Cookies cookies;
     private Man man;
+    private Controller controller;
 
     public GameBoard() {
         canvas = new CanvasWindow("PacMan But Better", 900, 900);
@@ -43,6 +44,11 @@ public class GameBoard {
         cookies = new Cookies(canvas, walls);
         man = new Man(450, 450);
         canvas.add(man.getShape());
+        controller = new Controller(man);
+
+        canvas.onKeyDown(event -> {
+            controller.keyPressed(event);
+        });
     }
 
     public static void main(String[] args) {

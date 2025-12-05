@@ -1,6 +1,6 @@
-import java.awt.Color;
+// import java.awt.Color;
 
-import edu.macalester.graphics.Ellipse;
+// import edu.macalester.graphics.Ellipse;
 import edu.macalester.graphics.Image;
 
     public class Man {
@@ -8,6 +8,9 @@ import edu.macalester.graphics.Image;
         // private double diameter = 20;
         // private double radius = 10;
         private Image man1;
+        private Integer speed = 14;
+        private Integer x = 450;
+        private Integer y = 450;
 
         public Man(double x, double y) {
 
@@ -23,5 +26,22 @@ import edu.macalester.graphics.Image;
             return man1;
     // public Ellipse getShape() {
     //     return shape;
+    }
+
+    public void goUp() {
+        y -= speed;
+        man1.setCenter(x,y);
+    }
+    public void goDown() {
+        y += speed;
+        man1.setCenter(x,y);
+    }
+    public void goLeft() {
+        x -= speed;
+        man1.setCenter(x,y);
+    }
+    public void goRight() {
+        x += speed;
+        man1.setCenter(x,y);
     }
 }
