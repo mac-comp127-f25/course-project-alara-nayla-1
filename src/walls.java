@@ -79,4 +79,14 @@ public class Walls {
         canvas.add(wall);
         wallList.add(wall); //I added this so that I can use it to check for collisions with the cookies
     }
+    //added for hit wall
+    // public boolean hitsWall(Man man) {
+    //     Rectangle manBounds = man.getShape().getBounds();
+    //     for (Rectangle wall : wallList) {
+    //         if (manBounds.intersects(wall.getBounds())) {
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
 }

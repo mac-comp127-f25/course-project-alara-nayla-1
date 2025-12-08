@@ -44,13 +44,22 @@ public class GameBoard {
         cookies = new Cookies(canvas, walls);
         man = new Man(450, 450);
         canvas.add(man.getShape());
-        controller = new Controller(man);
+        controller = new Controller(man, walls, this);
 
         canvas.onKeyDown(event -> {
             controller.keyPressed(event);
         });
     }
+    public int getWidth() {
+        return canvas.getWidth();
+    }
+    public int getHeight() {
+        return canvas.getHeight();
+    }
 
+    public Cookies getCookies() {
+        return cookies;
+    }
     public static void main(String[] args) {
         new GameBoard();
     }

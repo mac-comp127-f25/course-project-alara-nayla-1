@@ -1,14 +1,18 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import edu.macalester.graphics.CanvasWindow;
+import edu.macalester.graphics.Ellipse;
 import edu.macalester.graphics.Rectangle;
 
 public class Cookies {
     private List<Cookie> cookies = new ArrayList<>();
     private Walls walls;
+    private CanvasWindow canvas;
 
     public Cookies(CanvasWindow canvas, Walls walls) {
+        this.canvas = canvas;
         this.walls = walls;
         createCookies(canvas);
     }
@@ -23,7 +27,7 @@ public class Cookies {
         }
     }
     private boolean collidesWithWall(double x, double y) {
-        double radius = 9;
+        double radius = 8;
         for (Rectangle wall : walls.getWalls()) {
             double left = x - radius; 
             double right = x + radius;
@@ -49,5 +53,32 @@ public class Cookies {
     }
     public List<Cookie> getCookies() {
         return cookies;
+    }
+
+    public void eatCookies(Man man) {
+        double manLeft = man.getShape().getX();
+        double manRight = manLeft + man.getShape().getWidth();
+        double manTop = man.getShape().getY();
+        double manBottom = manTop + man.getShape().getHeight();
+
+        Iterator<Cookie> iterator = cookies.iterator();
+        while(iterator.hasNext()) {
+            Cookie cookie = iterator.next();
+            Ellipse shape = cookie.getShape();
+            
+            double cookieLeft = shape.getX();
+            double cookieRight = cookieLeft + shape.getWidth();
+            double cookieTop = shape.getY();
+            double cookieBottom = cookieTop + shape.getHeight();
+
+            boolean overlap = manRight > cookieLeft && manLeft < cookieRight &&
+                          manBottom > cookieTop && manTop < cookieBottom;
+
+            if (overlap) {
+                canvas.remove(shape);
+                iterator.remove();
+            }
+            
+        }
     }
 }
