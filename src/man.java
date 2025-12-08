@@ -17,8 +17,8 @@ import edu.macalester.graphics.Image;
             this.y = y;
 
             man1 = new Image(x, y, "pacman.png");
-            man1.setMaxHeight(45);
-            man1.setMaxWidth(45);
+            man1.setMaxHeight(40);
+            man1.setMaxWidth(40);
 
             man1.setCenter(x, y);
         // shape = new Ellipse(x - radius, y - radius, diameter, diameter);
