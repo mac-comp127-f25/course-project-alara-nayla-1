@@ -27,7 +27,7 @@ public class Cookies {
         }
     }
     private boolean collidesWithWall(double x, double y) {
-        double radius = 8;
+        double radius = 7;
         for (Rectangle wall : walls.getWalls()) {
             double left = x - radius; 
             double right = x + radius;

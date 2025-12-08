@@ -8,6 +8,7 @@ public class GameBoard {
     private Walls walls;
     private Cookies cookies;
     private Man man;
+    private Ghost ghost;
     private Controller controller;
 
     public GameBoard() {
@@ -22,6 +23,7 @@ public class GameBoard {
         walls = new Walls(canvas);
         cookies = new Cookies(canvas, walls);
         man = new Man(450, 450);
+        ghost = new Ghost(450, 450);
         canvas.add(man.getShape());
         controller = new Controller(man, walls, this);
 
