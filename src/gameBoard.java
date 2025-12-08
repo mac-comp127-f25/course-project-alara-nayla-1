@@ -25,6 +25,7 @@ public class GameBoard {
         man = new Man(450, 450);
         ghost = new Ghost(450, 450);
         canvas.add(man.getShape());
+        canvas.add(ghost.getShape());
         controller = new Controller(man, walls, this);
 
         canvas.onKeyDown(event -> {
