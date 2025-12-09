@@ -20,17 +20,17 @@ public class Ghost {
         return ghost1;
 
     }
-
-    public void goUp() {
-        ghost1.setRotation(270);
-        y -= speed;
-        ghost1.setCenter(x,y);
-    }
     public double getX() {
         return x;
     }
     public double getY() {
         return y;
+    }
+
+    // need to figure out the logic here and how to make the ghosts randomly move
+
+    public void goUp() {
+    y -= speed;
     }
 }
 
