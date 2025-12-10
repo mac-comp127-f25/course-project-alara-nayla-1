@@ -16,6 +16,7 @@ public class GameBoard {
     private List<Ghost> ghosts = new ArrayList<>();
     private ScoreBoard scoreBoard;
     private boolean gameOver = false;
+    private boolean invincible = false;
     private final double startingX = 450;
     private final double startingY = 450;
 
@@ -65,6 +66,7 @@ public class GameBoard {
     }
 
     private void checkGhostCollision() {
+        if (invincible) return;
         double manLeft = man.getShape().getX();
         double manRight = manLeft + man.getShape().getWidth();
         double manTop = man.getShape().getY();
@@ -88,11 +90,14 @@ public class GameBoard {
     
     private void handleGhostHit() {
         scoreBoard.loseLife();
+        invincible = true;
         
         if (scoreBoard.getLives() <= 0) {
             endGame(false);
         } else {
             man.resetPosition(startingX, startingY);
+            canvas.pause(1000);
+            invincible = false;
         }
     }
     
@@ -108,6 +113,11 @@ public class GameBoard {
     
     private void endGame(boolean won) {
         gameOver = true;
+
+        Rectangle messageBg = new Rectangle(0, 0, 500, 80);
+        messageBg.setFillColor(Color.GRAY);
+        messageBg.setCenter(canvas.getWidth() / 2, canvas.getHeight() / 2);
+        canvas.add(messageBg);
         
         GraphicsText message = new GraphicsText();
         if (won) {
