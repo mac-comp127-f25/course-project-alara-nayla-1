@@ -37,8 +37,8 @@ public class GameBoard {
         canvas.add(scoreBoard.getScoreText());
         canvas.add(scoreBoard.getLivesText());
 
-        Ghost ghost1 = new Ghost(450, 450, walls, this);
-        Ghost ghost2 = new Ghost(400, 450, walls, this);
+        Ghost ghost1 = new Ghost(150, 400, walls, this);
+        Ghost ghost2 = new Ghost(750, 400, walls, this);
         ghosts.add(ghost1);
         ghosts.add(ghost2);
 
@@ -101,7 +101,7 @@ public class GameBoard {
         
         scoreBoard.addPoints(points);
         
-        if (scoreBoard.getScore() >= 300) {
+        if (scoreBoard.getScore() >= 500) {
             endGame(true);
         }
     }

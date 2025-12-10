@@ -80,10 +80,10 @@ public class Ghost {
         double w = ghost1.getWidth();
         double h = ghost1.getHeight();
        
-        double left = newX;
-        double right = newX + w;
-        double top = newY;
-        double bottom = newY + h;
+        double left = newX - w/2;
+        double right = newX + w/2;
+        double top = newY - h/2;
+        double bottom = newY + h/2;
 
         for(Rectangle wall : walls.getWalls()) {
             double wl = wall.getX();
