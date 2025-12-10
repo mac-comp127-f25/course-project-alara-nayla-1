@@ -12,8 +12,10 @@ public class GameBoard {
     private Man man;
     // private Ghost ghost;
     private Controller controller;
-
     private List<Ghost> ghosts = new ArrayList<>();
+    private ScoreBoard scoreBoard;
+    private boolean gameOver = false;
+
 
     public GameBoard() {
         canvas = new CanvasWindow("PacMan But Better", 900, 900);
@@ -27,6 +29,7 @@ public class GameBoard {
         walls = new Walls(canvas);
         cookies = new Cookies(canvas, walls);
         man = new Man(450, 450);
+
         Ghost ghost1 = new Ghost(450, 450, walls, this);
         Ghost ghost2 = new Ghost(400, 450, walls, this);
         ghosts.add(ghost1);

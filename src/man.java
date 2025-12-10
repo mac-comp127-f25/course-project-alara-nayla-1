@@ -62,4 +62,11 @@ import edu.macalester.graphics.Image;
     public double getY() {
         return y;
     }
+
+    // reset position after ghost collision
+    public void resetPosition(double startX, double startY) {
+    this.x = startX;
+    this.y = startY;
+    man1.setCenter(x, y);
+    }
 }
