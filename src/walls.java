@@ -56,19 +56,19 @@ public class Walls {
         addWall(canvas, 750, 280, 60, 40);
         
         // Bottom left section
-        addWall(canvas, 70, 510, 80, 40);
-        addWall(canvas, 70, 620, 150, 40);
-        addWall(canvas, 250, 620, 100, 40);
-        addWall(canvas, 180, 730, 170, 40);
+        addWall(canvas, 70, 510, 50, 40);
+        addWall(canvas, 70, 620, 130, 40);
+        addWall(canvas, 250, 620, 80, 40);
+        addWall(canvas, 180, 730, 130, 40);
         
         // Bottom center
-        addWall(canvas, 380, 620, 140, 80);
+        addWall(canvas, 380, 620, 120, 80);
         
         // Bottom right section
-        addWall(canvas, 750, 510, 80, 40);
-        addWall(canvas, 680, 620, 150, 40);
-        addWall(canvas, 550, 620, 100, 40);
-        addWall(canvas, 550, 730, 170, 40);
+        addWall(canvas, 750, 510, 50, 40);
+        addWall(canvas, 680, 620, 130, 40);
+        addWall(canvas, 550, 620, 80, 40);
+        addWall(canvas, 550, 730, 130, 40);
     }
     
     private void addWall(CanvasWindow canvas, double x, double y, double width, double height) {
