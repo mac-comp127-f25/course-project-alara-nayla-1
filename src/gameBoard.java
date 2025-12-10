@@ -11,7 +11,6 @@ public class GameBoard {
     private Walls walls;
     private Cookies cookies;
     private Man man;
-    // private Ghost ghost;
     private Controller controller;
     private List<Ghost> ghosts = new ArrayList<>();
     private ScoreBoard scoreBoard;
@@ -106,7 +105,7 @@ public class GameBoard {
         
         scoreBoard.addPoints(points);
         
-        if (scoreBoard.getScore() >= 3200) { //this is Alara I added this cause I counted the dots lol.  3550
+        if (scoreBoard.getScore() >= 3200) {
             endGame(true);
         }
     }

@@ -5,9 +5,6 @@ import edu.macalester.graphics.Rectangle;
 
 public class Ghost {
     private Image ghost1;
-    // private Integer speed = 14;
-    // private double x;
-    // private double y;
     private double x, y;
     private double speed = 8;
 
@@ -34,12 +31,7 @@ public class Ghost {
         return ghost1;
 
     }
-    // public double getX() {
-    //     return x;
-    // }
-    // public double getY() {
-    //     return y;
-    // }
+
     public void update() {
         double newX = x;
         double newY = y;

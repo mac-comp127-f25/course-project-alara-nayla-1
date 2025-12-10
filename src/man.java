@@ -4,9 +4,6 @@
 import edu.macalester.graphics.Image;
 
     public class Man {
-        // private Ellipse shape;
-        // private double diameter = 20;
-        // private double radius = 10;
         private Image man1;
         private Integer speed = 14;
         private double x;
@@ -21,13 +18,9 @@ import edu.macalester.graphics.Image;
             man1.setMaxWidth(40);
 
             man1.setCenter(x, y);
-        // shape = new Ellipse(x - radius, y - radius, diameter, diameter);
-        // shape.setFillColor(Color.RED);
     }
         public Image getShape() {
             return man1;
-    // public Ellipse getShape() {
-    //     return shape;
     }
 
     public void goUp() {
@@ -50,12 +43,6 @@ import edu.macalester.graphics.Image;
         x += speed;
         man1.setCenter(x,y);
     }
-    //for hit of walls
-    // public void moveTo(double newX, double newY) {
-    //     x = newX;
-    //     y = newY;
-    //     man1.setCenter(x, y);
-    // }
     public double getX() {
         return x;
     }
@@ -63,7 +50,6 @@ import edu.macalester.graphics.Image;
         return y;
     }
 
-    // reset position after ghost collision
     public void resetPosition(double startX, double startY) {
     this.x = startX;
     this.y = startY;

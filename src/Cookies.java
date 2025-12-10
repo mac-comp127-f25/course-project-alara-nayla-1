@@ -83,32 +83,4 @@ public class Cookies {
         }
         return pointsEarned;
     }
-
-    // public void eatCookies(Man man) {
-    //     double manLeft = man.getShape().getX();
-    //     double manRight = manLeft + man.getShape().getWidth();
-    //     double manTop = man.getShape().getY();
-    //     double manBottom = manTop + man.getShape().getHeight();
-        
-
-    //     Iterator<Cookie> iterator = cookies.iterator();
-    //     while(iterator.hasNext()) {
-    //         Cookie cookie = iterator.next();
-    //         Ellipse shape = cookie.getShape();
-            
-    //         double cookieLeft = shape.getX();
-    //         double cookieRight = cookieLeft + shape.getWidth();
-    //         double cookieTop = shape.getY();
-    //         double cookieBottom = cookieTop + shape.getHeight();
-
-    //         boolean overlap = manRight > cookieLeft && manLeft < cookieRight &&
-    //                       manBottom > cookieTop && manTop < cookieBottom;
-
-    //         if (overlap) {
-    //             canvas.remove(shape);
-    //             iterator.remove();
-    //         }
-            
-    //     }
-    // }
 }

@@ -2,25 +2,18 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-// public class Walls {
-
-// public Walls() {
-//     Line wall = new Line(60, 100, 30, 100);
-//     wall.setStrokeColor(Color.BLUE);
-// }
-// }
 
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 
 public class Walls {
-     private List<Rectangle> wallList = new ArrayList<>(); //added for cookies
+     private List<Rectangle> wallList = new ArrayList<>(); 
     
     public Walls(CanvasWindow canvas) {
         createWalls(canvas);
     }
 
-    public List<Rectangle> getWalls() { //added for cookies
+    public List<Rectangle> getWalls() { 
         return wallList;
     }
     
@@ -77,16 +70,6 @@ public class Walls {
         wall.setStrokeColor(Color.BLUE);
         wall.setStrokeWidth(1);
         canvas.add(wall);
-        wallList.add(wall); //I added this so that I can use it to check for collisions with the cookies
+        wallList.add(wall);
     }
-    //added for hit wall
-    // public boolean hitsWall(Man man) {
-    //     Rectangle manBounds = man.getShape().getBounds();
-    //     for (Rectangle wall : wallList) {
-    //         if (manBounds.intersects(wall.getBounds())) {
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
 }

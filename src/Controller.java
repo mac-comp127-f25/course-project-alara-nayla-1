@@ -38,33 +38,6 @@ public class Controller {
         board.addScore(points);
     }
 
-    // public void keyPressed(KeyboardEvent k) {
-    //     Image shape = man.getShape();
-    //     double newLeft = shape.getX();
-    //     double newTop = shape.getY();
-
-
-    //     if (k.getKey() == Key.DOWN_ARROW){
-    //         newTop += SPEED;
-    //         if (!collidesWithWall(newLeft, newTop)) man.goDown();
-
-    //     } else if (k.getKey() == Key.UP_ARROW) {
-    //         newTop -= SPEED;
-    //         if (!collidesWithWall(newLeft, newTop)) man.goUp();
-
-    //     } else if (k.getKey() == Key.LEFT_ARROW) {
-    //         newLeft -= SPEED;
-    //         if (!collidesWithWall(newLeft, newTop)) man.goLeft();
-
-    //     } else if (k.getKey() == Key.RIGHT_ARROW) {
-    //         newLeft += SPEED;
-    //         if (!collidesWithWall(newLeft, newTop)) man.goRight();
-    //     }
-
-    //     board.getCookies().eatCookies(man);
-    // }
-
-
     private boolean collidesWithWall(double newX, double newY) {
         Image shape = man.getShape();
         double w = shape.getWidth();
@@ -81,7 +54,6 @@ public class Controller {
                 return true;
             }
         
-
         for(Rectangle wall : walls.getWalls()) {
             double wl = wall.getX();
             double wr = wl + wall.getWidth();
