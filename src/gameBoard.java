@@ -106,7 +106,7 @@ public class GameBoard {
         
         scoreBoard.addPoints(points);
         
-        if (scoreBoard.getScore() >= 500) {
+        if (scoreBoard.getScore() >= 3550) { //this is Alara I added this cause I counted the dots lol
             endGame(true);
         }
     }
