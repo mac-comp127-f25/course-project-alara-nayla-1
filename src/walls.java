@@ -26,34 +26,34 @@ public class Walls {
     
     private void createWalls(CanvasWindow canvas) {
         // Top left section
-        addWall(canvas, 70, 60, 150, 40);
-        addWall(canvas, 250, 60, 100, 40);
-        addWall(canvas, 70, 170, 80, 50);
-        addWall(canvas, 180, 170, 170, 50);
+        addWall(canvas, 70, 60, 130, 40);
+        addWall(canvas, 250, 60, 80, 40);
+        addWall(canvas, 70, 170, 60, 50);
+        addWall(canvas, 180, 170, 150, 50);
         
         // Top center section
-        addWall(canvas, 390, 60, 120, 200);
+        addWall(canvas, 390, 60, 120, 150);
         
         // Top right section
-        addWall(canvas, 550, 60, 100, 40);
-        addWall(canvas, 680, 60, 150, 40);
-        addWall(canvas, 680, 170, 150, 40);
-        addWall(canvas, 550, 170, 100, 40);
+        addWall(canvas, 580, 60, 70, 40);
+        addWall(canvas, 700, 60, 90, 40);
+        addWall(canvas, 700, 170, 90, 40);
+        addWall(canvas, 580, 170, 70, 40);
         
         // Left side mid section
-        addWall(canvas, 70, 280, 80, 40);
-        addWall(canvas, 180, 280, 80, 130);
+        addWall(canvas, 70, 280, 60, 40);
+        addWall(canvas, 180, 280, 60, 130);
         
         // Center ghost house
         addWall(canvas, 290, 280, 80, 40);
         addWall(canvas, 290, 390, 80, 45);
-        addWall(canvas, 530, 280, 80, 40);
-        addWall(canvas, 530, 390, 80, 45);
+        addWall(canvas, 530, 280, 60, 40);
+        addWall(canvas, 530, 390, 60, 45);
         addWall(canvas, 380, 510, 140, 40);
         
         // Right side mid section
-        addWall(canvas, 640, 280, 80, 130);
-        addWall(canvas, 750, 280, 80, 40);
+        addWall(canvas, 640, 280, 60, 130);
+        addWall(canvas, 750, 280, 60, 40);
         
         // Bottom left section
         addWall(canvas, 70, 510, 80, 40);
