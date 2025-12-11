@@ -1,5 +1,4 @@
 import java.util.Random;
-
 import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
@@ -7,10 +6,8 @@ public class Ghost {
     private Image ghost1;
     private double x, y;
     private double speed = 8;
-
     private int direction;
     private Random rand = new Random();
-
     private Walls walls;
     private GameBoard board;
 
@@ -27,9 +24,9 @@ public class Ghost {
 
         direction = rand.nextInt(4);
     }
+
     public Image getShape() {
         return ghost1;
-
     }
 
     public void update() {
@@ -53,10 +50,10 @@ public class Ghost {
             direction = rand.nextInt(4);
         }
     }
+
     private boolean collidesWithBorder(double newX, double newY) {
         double w = ghost1.getWidth();
         double h = ghost1.getHeight();
-
         double left = newX - w/2;
         double right = newX + w/2;
         double top = newY - h/2;
@@ -65,13 +62,11 @@ public class Ghost {
         return left < 0 || top < 0 ||
                right > board.getWidth() ||
                bottom > board.getHeight();
-
-
     }
+
     private boolean collidesWithWall(double newX, double newY) {
         double w = ghost1.getWidth();
         double h = ghost1.getHeight();
-       
         double left = newX - w/2;
         double right = newX + w/2;
         double top = newY - h/2;
@@ -82,7 +77,6 @@ public class Ghost {
             double wr = wl + wall.getWidth();
             double wt = wall.getY();
             double wb = wt + wall.getHeight();
-
             boolean overlap =
                 right > wl && left < wr &&
                 bottom > wt && top < wb;
@@ -91,6 +85,5 @@ public class Ghost {
         }
         return false;
     }
-
 }
 

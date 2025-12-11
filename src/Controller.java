@@ -20,7 +20,7 @@ public class Controller {
         double newLeft = shape.getX();
         double newTop = shape.getY();
         
-        if (k.getKey() == Key.DOWN_ARROW){
+        if (k.getKey() == Key.DOWN_ARROW) {
             newTop += SPEED;
             if (!collidesWithWall(newLeft, newTop)) man.goDown();
         } else if (k.getKey() == Key.UP_ARROW) {
@@ -59,9 +59,7 @@ public class Controller {
             double wr = wl + wall.getWidth();
             double wt = wall.getY();
             double wb = wt + wall.getHeight();
-
             boolean overlap = right > wl && left < wr && bottom > wt && top < wb;
-
             if (overlap) return true;
         }
         return false;

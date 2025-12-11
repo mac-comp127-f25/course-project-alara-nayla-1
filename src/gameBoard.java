@@ -1,7 +1,6 @@
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Rectangle;
-
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ public class GameBoard {
     private Man man;
     private Controller controller;
     private List<Ghost> ghosts = new ArrayList<>();
-    private ScoreBoard scoreBoard;
+    private ScoreKeeping scoreKeeping;
     private boolean gameOver = false;
     private boolean invincible = false;
     private final double startingX = 450;
@@ -22,20 +21,18 @@ public class GameBoard {
 
     public GameBoard() {
         canvas = new CanvasWindow("Cookie Man", 900, 900);
-        
         Rectangle border = new Rectangle(20, 10, 860, 830);
+
         border.setStrokeWidth(10);
         border.setFillColor(Color.BLACK);
         border.setStrokeColor(Color.BLUE);
         canvas.add(border);
-        
+
         walls = new Walls(canvas);
         cookies = new Cookies(canvas, walls);
         man = new Man(startingX, startingY);
 
-        scoreBoard = new ScoreBoard(30, 870);
-        canvas.add(scoreBoard.getScoreText());
-        canvas.add(scoreBoard.getLivesText());
+        scoreKeeping = new ScoreKeeping(30, 870);
 
         Ghost ghost1 = new Ghost(150, 400, walls, this);
         Ghost ghost2 = new Ghost(750, 400, walls, this);
@@ -88,10 +85,10 @@ public class GameBoard {
     }
     
     private void handleGhostHit() {
-        scoreBoard.loseLife();
+        scoreKeeping.loseLife();
         invincible = true;
         
-        if (scoreBoard.getLives() <= 0) {
+        if (scoreKeeping.getLives() <= 0) {
             endGame(false);
         } else {
             man.resetPosition(startingX, startingY);
@@ -103,9 +100,9 @@ public class GameBoard {
     public void addScore(int points) {
         if (gameOver) return;
         
-        scoreBoard.addPoints(points);
+        scoreKeeping.addPoints(points);
         
-        if (scoreBoard.getScore() >= 3200) {
+        if (scoreKeeping.getScore() >= 3200) {
             endGame(true);
         }
     }
@@ -120,9 +117,9 @@ public class GameBoard {
         
         GraphicsText message = new GraphicsText();
         if (won) {
-            message.setText("YOU WIN! Score: " + scoreBoard.getScore());
+            message.setText("YOU WIN! Score: " + scoreKeeping.getScore());
         } else {
-            message.setText("GAME OVER! Final Score: " + scoreBoard.getScore());
+            message.setText("GAME OVER! Final Score: " + scoreKeeping.getScore());
         }
         message.setFillColor(Color.YELLOW);
         message.setFontSize(36);
@@ -133,6 +130,7 @@ public class GameBoard {
     public int getWidth() {
         return canvas.getWidth();
     }
+
     public int getHeight() {
         return canvas.getHeight();
     }
@@ -140,6 +138,7 @@ public class GameBoard {
     public Cookies getCookies() {
         return cookies;
     }
+    
     public static void main(String[] args) {
         new GameBoard();
     }

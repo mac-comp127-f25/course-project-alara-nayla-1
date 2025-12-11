@@ -1,13 +1,11 @@
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
-
-
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 
 public class Walls {
-     private List<Rectangle> wallList = new ArrayList<>(); 
+    private List<Rectangle> wallList = new ArrayList<>();
     
     public Walls(CanvasWindow canvas) {
         createWalls(canvas);
@@ -64,6 +62,7 @@ public class Walls {
         addWall(canvas, 550, 730, 130, 40);
     }
     
+    // Adds the blue borders
     private void addWall(CanvasWindow canvas, double x, double y, double width, double height) {
         Rectangle wall = new Rectangle(x, y, width, height);
         wall.setFillColor(Color.BLUE);
