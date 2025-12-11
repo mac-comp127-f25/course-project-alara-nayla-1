@@ -4,6 +4,8 @@ import java.util.List;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 
+// Creates borders, walls and the maze.
+
 public class Walls {
     private List<Rectangle> wallList = new ArrayList<>();
     

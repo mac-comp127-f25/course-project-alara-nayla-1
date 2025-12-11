@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+// Main class of Cookie Man.
+
 public class GameBoard {
     private CanvasWindow canvas;
     private Walls walls;

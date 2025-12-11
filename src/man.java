@@ -1,5 +1,7 @@
 import edu.macalester.graphics.Image;
 
+// Creates the Cookie Man.
+
 public class Man {
     private Image man1;
     private Integer speed = 14;

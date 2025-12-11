@@ -2,6 +2,8 @@ import java.util.Random;
 import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
+// Creates the Ghosts that chase Cookie Man randomly, and cause a palyer to lose.
+
 public class Ghost {
     private Image ghost1;
     private double x, y;

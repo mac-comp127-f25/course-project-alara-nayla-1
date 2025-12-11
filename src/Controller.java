@@ -3,6 +3,8 @@ import edu.macalester.graphics.Rectangle;
 import edu.macalester.graphics.events.Key;
 import edu.macalester.graphics.events.KeyboardEvent;
 
+// Controller sets the system of control for Cookie Man with the arrow keys and specific constraints for movement.
+
 public class Controller {
     private Man man;
     private Walls walls;

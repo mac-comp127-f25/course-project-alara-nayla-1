@@ -1,3 +1,5 @@
+// Keeps track of the player's score and the lives left.
+
 public class ScoreKeeping {
     private int score;
     private int lives;
