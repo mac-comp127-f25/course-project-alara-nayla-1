@@ -1,3 +1,4 @@
-# Project Title Goes Here
+# Cookie Man
+# Alara Yener and Nayla Trigueros Ortiz
 
-Info about your project goes here
+Cookie Man is a twsit on the traditional PacMan game, where a user-controlled character in a maze collects cookie-points while avoiding monsters.

@@ -21,7 +21,7 @@ public class GameBoard {
 
 
     public GameBoard() {
-        canvas = new CanvasWindow("PacMan But Better", 900, 900);
+        canvas = new CanvasWindow("Cookie Man", 900, 900);
         
         Rectangle border = new Rectangle(20, 10, 860, 830);
         border.setStrokeWidth(10);
