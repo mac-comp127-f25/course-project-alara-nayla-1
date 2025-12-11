@@ -113,7 +113,7 @@ public class GameBoard {
     private void endGame(boolean won) {
         gameOver = true;
 
-        Rectangle messageBg = new Rectangle(0, 0, 500, 80);
+        Rectangle messageBg = new Rectangle(0, 0, 700, 80);
         messageBg.setFillColor(Color.GRAY);
         messageBg.setCenter(canvas.getWidth() / 2, canvas.getHeight() / 2);
         canvas.add(messageBg);
