@@ -11,13 +11,12 @@ public class Ghost {
     private int direction;
     private Random rand = new Random();
     private Walls walls;
-    private GameBoard board;
+    
 
-    public Ghost(double x, double y, Walls walls, GameBoard board) {
+    public Ghost(double x, double y, Walls walls) {
         this.x = x;
         this.y = y;
         this.walls = walls;
-        this.board = board;
 
         ghost1 = new Image(x, y, "pinkGhost.png");
         ghost1.setMaxHeight(40);
@@ -61,9 +60,13 @@ public class Ghost {
         double top = newY - h/2;
         double bottom = newY + h/2;
 
-        return left < 0 || top < 0 ||
-               right > board.getWidth() ||
-               bottom > board.getHeight();
+        double borderLeft = GameBoard.BORDER_LEFT;
+        double borderRight = GameBoard.BORDER_LEFT + GameBoard.BORDER_WIDTH;
+        double borderTop = GameBoard.BORDER_TOP;
+        double borderBottom = GameBoard.BORDER_TOP + GameBoard.BORDER_HEIGHT;
+
+        return left < borderLeft || top < borderTop ||
+               right > borderRight || bottom > borderBottom;
     }
 
     private boolean collidesWithWall(double newX, double newY) {

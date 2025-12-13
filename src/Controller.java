@@ -50,9 +50,14 @@ public class Controller {
         double top = newY;
         double bottom = newY + h;
 
-        if (left < 0 || top < 0 ||
-            right > board.getWidth() ||
-            bottom > board.getHeight()) {
+        double borderLeft = GameBoard.BORDER_LEFT;
+        double borderRight = GameBoard.BORDER_LEFT + GameBoard.BORDER_WIDTH;
+        double borderTop = GameBoard.BORDER_TOP;
+        double borderBottom = GameBoard.BORDER_TOP + GameBoard.BORDER_HEIGHT;
+    
+
+        if (left < borderLeft || top < borderTop ||
+            right > borderRight || bottom > borderBottom) {
                 return true;
             }
         

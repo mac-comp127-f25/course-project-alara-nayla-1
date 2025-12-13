@@ -8,6 +8,13 @@ import java.util.List;
 // Main class of Cookie Man.
 
 public class GameBoard {
+    public static final int GAME_WIDTH = 900;
+    public static final int GAME_HEIGHT = 900;
+    public static final int BORDER_LEFT = 20;
+    public static final int BORDER_TOP = 10;
+    public static final int BORDER_WIDTH = 860;
+    public static final int BORDER_HEIGHT = 830;
+
     private CanvasWindow canvas;
     private Walls walls;
     private Cookies cookies;
@@ -22,8 +29,8 @@ public class GameBoard {
 
 
     public GameBoard() {
-        canvas = new CanvasWindow("Cookie Man", 900, 900);
-        Rectangle border = new Rectangle(20, 10, 860, 830);
+        canvas = new CanvasWindow("Cookie Man", GAME_WIDTH, GAME_HEIGHT);
+        Rectangle border = new Rectangle(BORDER_LEFT, BORDER_TOP, BORDER_WIDTH, BORDER_HEIGHT);
 
         border.setStrokeWidth(10);
         border.setFillColor(Color.BLACK);
@@ -36,8 +43,8 @@ public class GameBoard {
 
         scoreKeeping = new ScoreKeeping(30, 870);
 
-        Ghost ghost1 = new Ghost(150, 400, walls, this);
-        Ghost ghost2 = new Ghost(750, 400, walls, this);
+        Ghost ghost1 = new Ghost(150, 400, walls);
+        Ghost ghost2 = new Ghost(750, 400, walls);
         ghosts.add(ghost1);
         ghosts.add(ghost2);
 
@@ -114,7 +121,7 @@ public class GameBoard {
 
         Rectangle messageBg = new Rectangle(0, 0, 700, 80);
         messageBg.setFillColor(Color.GRAY);
-        messageBg.setCenter(canvas.getWidth() / 2, canvas.getHeight() / 2);
+        messageBg.setCenter(GAME_WIDTH / 2, GAME_HEIGHT / 2);
         canvas.add(messageBg);
         
         GraphicsText message = new GraphicsText();
@@ -125,16 +132,16 @@ public class GameBoard {
         }
         message.setFillColor(Color.YELLOW);
         message.setFontSize(36);
-        message.setCenter(canvas.getWidth() / 2, canvas.getHeight() / 2);
+        message.setCenter(GAME_WIDTH / 2, GAME_HEIGHT / 2);
         canvas.add(message);
     }
 
     public int getWidth() {
-        return canvas.getWidth();
+        return GAME_WIDTH;
     }
 
     public int getHeight() {
-        return canvas.getHeight();
+        return GAME_HEIGHT;
     }
 
     public Cookies getCookies() {

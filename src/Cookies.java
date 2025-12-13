@@ -21,8 +21,8 @@ public class Cookies {
     private void createCookies(CanvasWindow canvas) {
         double space = 38;
 
-        for (double x = 40; x <860; x += space) {
-            for (double y = 40; y < 820; y += space) {
+        for (double x = 40; x < GameBoard.GAME_WIDTH - 40; x += space) {
+            for (double y = 40; y < GameBoard.GAME_HEIGHT - 80; y += space) {
                 if(collidesWithWall(x, y)) continue;
                 addCookie(canvas, x, y);
             }
