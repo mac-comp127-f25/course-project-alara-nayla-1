@@ -20,8 +20,7 @@ How Cookie Man works:
 For our characters, we imported images from a quick Google Search of: PacMan characters pixel. To create our cookies, win/lose logic, and key control, we took inspo from past COMP 127 homeworks, such as: Breakout, BubbleBlitz.
 
 There are some limitations to our game:
-- Display Issues: On smaller screens, the 900x900 game window may not display at its full size or may extend beyond your screen boundaries. Additionally, score and lives are tracked internally but not displayed during gameplay. Players will see their final score only when the game ends (win or loss)
-- Border Collision: Cookie Man's circular shape may slightly overlap the game borders during movement.
+- Display Issues: Score and lives are tracked internally but not displayed during gameplay. Players will see their final score only when the game ends (win or loss). Also, Cookie Man's circular shape may slightly overlap the game borders during movement.
 - Movement Restrictions: Cookie Man follows an invisible grid aligned with the cookie positions. If Cookie Man gets too close to a wall and becomes misaligned with this grid, movement may be restricted. To resume normal movement, navigate back toward the visible cookie trail to realign with the grid.
 - Re-start Constraint: When you lose a life, Cookie Man reappears at the starting position but the ghosts remain in their current locations. If a ghost is near the start point, you may lose another life immediately upon re-starting.
 
