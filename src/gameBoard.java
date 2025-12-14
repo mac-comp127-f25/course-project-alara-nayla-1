@@ -111,7 +111,7 @@ public class GameBoard {
         
         scoreKeeping.addPoints(points);
         
-        if (scoreKeeping.getScore() >= 3200) {
+        if (scoreKeeping.getScore() >= 3620) {
             endGame(true);
         }
     }
