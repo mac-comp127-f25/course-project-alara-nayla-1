@@ -5,8 +5,9 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Ellipse;
 import edu.macalester.graphics.Rectangle;
 
-// Cookies is the grid path that Cookie Man follows to avoid collision with borders and maze walls.
-
+/**
+ * Cookies is the grid path that Cookie Man follows to avoid collision with borders and maze walls.
+ */
 public class Cookies {
     private List<Cookie> cookies = new ArrayList<>();
     private Walls walls;

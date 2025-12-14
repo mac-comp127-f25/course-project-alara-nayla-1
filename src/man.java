@@ -1,6 +1,8 @@
 import edu.macalester.graphics.Image;
 
-// Creates the Cookie Man.
+/**
+ * Creates the Cookie Man.
+ */
 
 public class Man {
     private Image man1;

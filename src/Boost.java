@@ -1,7 +1,9 @@
 import java.awt.Color;
 import edu.macalester.graphics.Ellipse;
 
-// Boost will provide Cookie Man with a speed power to collect cookies faster.
+/**
+ * Boost will provide Cookie Man with a speed power to collect cookies faster.
+ */
 
 public class Boost {
     private Ellipse shape;

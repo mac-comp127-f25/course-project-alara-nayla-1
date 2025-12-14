@@ -1,7 +1,9 @@
 import edu.macalester.graphics.Ellipse;
 import java.awt.Color;
 
-// Creates the cookie-points that Cookie Man collects.
+/**
+ * Creates the cookie-points that Cookie Man collects.
+ */
 
 public class Cookie {
     private Ellipse shape;
