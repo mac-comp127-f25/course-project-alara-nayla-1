@@ -77,6 +77,7 @@ public class Controller {
         }
         return false;
     }
+    
     private void checkBoostCollision() {
         if (!boost.isActive()) return;
 

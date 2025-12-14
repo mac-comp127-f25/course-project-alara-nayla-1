@@ -16,6 +16,7 @@ How Cookie Man works:
 - Use the arrow keys to control Cookie Man and collect all cookies while avoiding the ghosts. 
 - Objective: Reach 3200 points by collecting all cookies (10 points each) to win.
 - You are given 3 lives; each collision with a ghost costs one life. There is a 1-second pause for re-start. The game ends when you run out of lives.
+- There is a boost which appears as a green cookie that makes cookie man run faster for 10 seconds
 
 For our characters, we imported images from a quick Google Search of: PacMan characters pixel. To create our cookies, win/lose logic, and key control, we took inspo from past COMP 127 homeworks, such as: Breakout, BubbleBlitz.
 
