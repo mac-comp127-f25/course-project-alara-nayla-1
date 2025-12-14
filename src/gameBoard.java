@@ -26,6 +26,7 @@ public class GameBoard {
     private boolean invincible = false;
     private final double startingX = 450;
     private final double startingY = 450;
+    private Boost boost;
 
 
     public GameBoard() {
@@ -40,6 +41,9 @@ public class GameBoard {
         walls = new Walls(canvas);
         cookies = new Cookies(canvas, walls);
         man = new Man(startingX, startingY);
+
+        boost = new Boost(725, 725);
+        canvas.add(boost.getShape());
 
         scoreKeeping = new ScoreKeeping(30, 870);
 
@@ -146,6 +150,14 @@ public class GameBoard {
 
     public Cookies getCookies() {
         return cookies;
+    }
+
+    public CanvasWindow getCanvas() {
+        return canvas;
+    }
+
+    public Boost getBoost() {
+        return boost;
     }
     
     public static void main(String[] args) {

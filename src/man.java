@@ -60,4 +60,16 @@ public class Man {
         this.y = startY;
         man1.setCenter(x, y);
     }
+
+    public void doubleSpeed() {
+        speed = speed * 2;
+    }
+
+    public void resetSpeed() {
+        speed = 14;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
 }

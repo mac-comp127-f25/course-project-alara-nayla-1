@@ -5,8 +5,8 @@ import edu.macalester.graphics.Ellipse;
 
 public class Boost {
     private Ellipse shape;
-    private double diameter = 18;
-    private double radius = 9;
+    private double diameter = 26;
+    private double radius = 13;
     public boolean active = true;
 
     public Boost(double x, double y) {
